@@ -125,3 +125,24 @@
     margin-left: -1vw;
     margin-top: 1vw;
   }
+
+
+@media screen and (max-width: 768px) {
+  body .card {
+    height: 70vw;
+    width: 80vw;
+    margin: 5vw auto;
+  }
+  body .card #header h1 {
+    font-size: 5vw;
+  }
+  body .card #message-section {
+    height: 40vw;
+  }
+  body .card #input-section input {
+    width: 60%;
+  }
+  body .card .send {
+    margin-left: 5%;
+  }
+}
