@@ -1,15 +1,123 @@
-<form
-  action="https://formspree.io/f/mgegozal"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Hide overflow to prevent scrollbars during shake */
+      animation: shake 5s infinite; /* Shake animation */
+    }
+
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+      }
+      20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+      }
+    }
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: -1; /* Place the video behind other content */
+    }
+
+    form {
+      background: linear-gradient(45deg, #3498db, #2980b9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(19, 10, 50, 50);
+      max-width: 600px; /* Increased maximum width for larger screens */
+      width: 100%;
+      margin: 20px; /* Add margin for better spacing on small screens */
+    }
+
+    h1 {
+      text-align: center;
+      color: #0a0101;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      height: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      box-sizing: border-box; /* Box-sizing for consistent sizing */
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 50);
+      font-size: 16px;
+    }
+
+    input,
+    textarea {
+      background-color: rgba(201, 216, 181, 0.8);
+    }
+
+    button {
+      background-color: #85cb1b;
+      color: #060404;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    @media (max-width: 600px) {
+      video {
+        display: none; /* Hide video on small screens */
+      }
+
+      form {
+        margin: 10px; /* Adjust margin for better spacing on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay loop muted>
+    <source src="ghost.mp4" type="video/mp4"> <!-- Replace with your video file -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- modify this form HTML and place wherever you want your form -->
+  <form action="https://formspree.io/f/mgegozal" method="POST">
+    <h1>GUYS REGISTER PLEASE !!</h1>
+    <label>Your name: <input type="text" name="name"></label>
+    <label>Your email: <input type="email" name="email"></label>
+    <label>Your age: <input type="text" name="age"></label>
+    <label>Your message: <textarea name="message"></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+
+</body>
+</html>
