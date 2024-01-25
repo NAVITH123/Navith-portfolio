@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      background-image: url("https://wallpapers.com/images/high/terraformed-moon-live-4k-uhd-36vmjjm6fxofxzxe.webp");
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      overflow: hidden; /* Hide overflow to prevent scrollbars during shake */
       animation: shake 5s infinite; /* Shake animation */
     }
 
@@ -26,18 +26,6 @@
       }
     }
 
-    video {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      z-index: -1; /* Place the video behind other content */
-    }
-
     form {
       background: linear-gradient(45deg, #3498db, #2980b9);
       padding: 20px;
@@ -45,7 +33,6 @@
       box-shadow: 0 4px 8px rgba(19, 10, 50, 50);
       max-width: 600px; /* Increased maximum width for larger screens */
       width: 100%;
-      margin: 20px; /* Add margin for better spacing on small screens */
     }
 
     h1 {
@@ -68,7 +55,7 @@
       height: 40px;
       font-weight: 700;
       margin-bottom: 15px;
-      box-sizing: border-box; /* Box-sizing for consistent sizing */
+      box-sizing: 20px;
       border: none;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 50);
@@ -92,22 +79,13 @@
     }
 
     @media (max-width: 600px) {
-      video {
-        display: none; /* Hide video on small screens */
-      }
-
       form {
-        margin: 10px; /* Adjust margin for better spacing on small screens */
+        transform: none; /* Remove rotation on small screens */
       }
     }
   </style>
 </head>
 <body>
-
-  <video autoplay loop muted>
-    <source src="ghost.mp4" type="video/mp4"> <!-- Replace with your video file -->
-    Your browser does not support the video tag.
-  </video>
 
   <!-- modify this form HTML and place wherever you want your form -->
   <form action="https://formspree.io/f/mgegozal" method="POST">
